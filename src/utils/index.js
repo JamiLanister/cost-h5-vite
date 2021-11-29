@@ -78,10 +78,12 @@ export const typeMap = {
   };
 
   export const imgUrlTrans = (url) => {
+    // debugger;
     if (url && url.startsWith('http')) {
       return url
     } else {
-      url = `${MODE == 'development' ? 'http://localhost:7002' : baseUrl}${url}`
+      url = `${MODE == 'development' ? 'http://localhost:7001' : baseUrl}${url}`
+      console.log(url, 'url')
       return url
     }
   }

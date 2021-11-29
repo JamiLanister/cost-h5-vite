@@ -28,15 +28,15 @@ const UserInfo = () => {
 
   const handleSelect = (file) => {
     console.log('file.file', file.file)
-    if (file && file.file.size > 200 * 1024) {
-      Toast.show('上传头像不得超过 200 KB！！')
+    if (file && file.file.size > 1000 * 1024) {
+      Toast.show('上传头像不得超过 1000 KB！！')
       return
     }
     let formData = new FormData()
     formData.append('file', file.file)
     axios({
       method: 'post',
-      url: `${baseUrl}/api/upload`,
+      url: `${baseUrl}/upload`,
       data: formData,
       headers: {
         'Content-Type': 'multipart/form-data',
