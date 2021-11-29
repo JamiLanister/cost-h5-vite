@@ -7,7 +7,7 @@ import { get, post, imgUrlTrans } from '@/utils'
 import { baseUrl } from 'config'
 import s from './style.module.less';
 
-const UserInfo = () => {
+const UserInfo = (params) => {
   const history = useHistory()
   const [user, setUser] = useState({});
   const [avatar, setAvatar] = useState('')
